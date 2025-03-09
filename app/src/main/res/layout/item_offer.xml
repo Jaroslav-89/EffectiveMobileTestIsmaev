@@ -5,8 +5,8 @@
     android:id="@+id/offer"
     android:layout_width="132dp"
     android:layout_height="120dp"
-    android:backgroundTint="@color/grey1"
     android:layout_marginStart="8dp"
+    android:backgroundTint="@color/grey1"
     app:cardCornerRadius="8dp">
 
     <LinearLayout
@@ -43,6 +43,5 @@
             tools:text="Поднять" />
 
     </LinearLayout>
-
 
 </androidx.cardview.widget.CardView>

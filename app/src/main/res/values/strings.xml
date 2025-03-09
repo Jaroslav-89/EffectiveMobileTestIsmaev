@@ -10,4 +10,5 @@
 
     <string name="respond_to_vacancy_btn">Откликнуться</string>
     <string name="search_text_hint">Должность, ключевые слова</string>
+    <string name="vacancy_search_heading">Вакансии для вас</string>
 </resources>

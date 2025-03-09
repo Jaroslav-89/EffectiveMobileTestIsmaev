@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="16dp">
 
         <LinearLayout
@@ -154,9 +154,10 @@
         <Button
             android:id="@+id/respondBtn"
             android:layout_width="0dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_green_rounded"
+            android:paddingVertical="0dp"
             android:letterSpacing="0"
             android:text="@string/respond_to_vacancy_btn"
             android:textAllCaps="false"

@@ -80,12 +80,13 @@
             tools:itemCount="3"
             tools:listitem="@layout/item_vacancy" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/moreVacanciesBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/background_blue_rounded"
             android:textAllCaps="false"
             android:textColor="@color/white"

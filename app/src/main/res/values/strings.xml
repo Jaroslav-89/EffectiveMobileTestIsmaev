@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EffectiveMobileTestIsmaev</string>
+    <!--    bottom nav menu-->
+    <string name="search_bottom_nav">Поиск</string>
+    <string name="favorite_bottom_nav">Избранное</string>
+    <string name="responses_bottom_nav">Отклики</string>
+    <string name="messages_bottom_nav">Сообщения</string>
+    <string name="profile_bottom_nav">Профиль</string>
+
+
+    <string name="respond_to_vacancy_btn">Откликнуться</string>
+    <string name="search_text_hint">Должность, ключевые слова</string>
+</resources>

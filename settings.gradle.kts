@@ -21,4 +21,14 @@ dependencyResolutionManagement {
 
 rootProject.name = "EffectiveMobileTestIsmaev"
 include(":app")
- 
+include(":features")
+include(":core")
+include(":core:database")
+include(":core:network")
+include(":features:favorite")
+include(":features:search")
+include(":core:uikit")
+include(":features:messages")
+include(":features:profile")
+include(":features:responses")
+include(":core:common")

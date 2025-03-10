@@ -1,4 +1,4 @@
-package com.example.effectivemobiletestismaev
+package com.example.favorite
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

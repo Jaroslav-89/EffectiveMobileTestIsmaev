@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/shadows"
     android:paddingHorizontal="16dp"
-    android:paddingTop="16dp">
+    android:paddingTop="16dp"
+    tools:context=".presentation.ui.SearchAllVacanciesFragment">
 
     <EditText
         android:id="@+id/searchEt"

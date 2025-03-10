@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation_graph"
-    app:startDestination="@id/">
+    app:startDestination="@id/search_navigation_graph">
+
+    <include app:graph="@navigation/search_navigation_graph" />
 
 </navigation>

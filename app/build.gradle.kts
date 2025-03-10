@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -46,5 +49,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
     implementation(project(":core:uikit"))
+    implementation(project(":features:search"))
 }

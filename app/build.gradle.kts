@@ -39,7 +39,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -51,7 +50,11 @@ dependencies {
 
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.di.koin)
 
     implementation(project(":core:uikit"))
+    implementation(project(":core:database"))
     implementation(project(":features:search"))
+    implementation(project(":features:favorite"))
+
 }

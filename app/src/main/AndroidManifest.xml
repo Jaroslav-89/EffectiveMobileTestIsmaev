@@ -14,7 +14,7 @@
         android:theme="@style/Theme.EffectiveMobileTestIsmaev"
         tools:targetApi="34">
         <activity
-            android:name=".root.RootActivity"
+            android:name=".presentation.ui.RootActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

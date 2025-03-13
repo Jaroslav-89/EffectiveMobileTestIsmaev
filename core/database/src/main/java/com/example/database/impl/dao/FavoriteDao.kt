@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.database.entity.FavoriteVacancyEntity
 import com.example.database.entity.FavoriteVacancyIdEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface FavoritesDao {
@@ -18,5 +19,11 @@ interface FavoritesDao {
     suspend fun deleteFavoriteVacancy(favorite: FavoriteVacancyEntity)
 
     @Query("SELECT id FROM favorites_vacancies")
-    suspend fun getAllVacancyIds(): List<FavoriteVacancyIdEntity>
+    fun getAllVacancyIds(): Flow<List<FavoriteVacancyIdEntity>>
+
+    @Query("SELECT * FROM favorites_vacancies")
+    fun getAllVacancyI(): Flow<List<FavoriteVacancyIdEntity>>
+
+    @Query("SELECT COUNT(*) FROM favorites_vacancies")
+    fun getFavoritesCount(): Flow<Int>
 }

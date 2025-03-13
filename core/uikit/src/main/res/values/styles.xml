@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- bottom navigation -->
+    <style name="divider">
+        <item name="android:background">@color/grey1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_1</item>
+    </style>
+
+    <style name="bottomNavigation">
+        <item name="android:background">@color/shadows</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="itemTextAppearanceActive">@style/bottomNavigationView.active</item>
+        <item name="itemTextAppearanceInactive">@style/bottomNavigationView</item>
+        <item name="itemTextAppearanceActiveBoldEnabled">false</item>
+        <item name="itemIconTint">@color/bottom_navigation_colors</item>
+        <item name="itemTextColor">@color/bottom_navigation_colors</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="bottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/font_10</item>
+    </style>
+
+    <style name="bottomNavigationView.active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/font_10</item>
+    </style>
 
 </resources>

@@ -15,6 +15,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField(
+            "String",
+            "JOBS_API_BASE_URL",
+            "\"https://drive.usercontent.google.com/u/0/uc?id=1z4TbeDkbfXkvgpoJprXbN85uCcD7f00r&export=download\""
+        )
     }
 
     buildTypes {
@@ -35,6 +41,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -53,8 +60,9 @@ dependencies {
     implementation(libs.di.koin)
 
     implementation(project(":core:uikit"))
+    implementation(project(":core:network"))
+    implementation(project(":core:network-utills"))
     implementation(project(":core:database"))
     implementation(project(":features:search"))
     implementation(project(":features:favorite"))
-
 }

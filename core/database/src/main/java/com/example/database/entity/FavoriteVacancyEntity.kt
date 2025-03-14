@@ -5,35 +5,43 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "favorites_vacancies")
-data class FavoriteVacancyEntity (
+data class FavoriteVacancyEntity(
     @PrimaryKey(autoGenerate = false)
+    @ColumnInfo(name = "id")
     val id: String,
-    @ColumnInfo("looking_number")
+    @ColumnInfo(name = "looking_number")
     val lookingNumber: Int,
+    @ColumnInfo(name = "title")
     val title: String,
-    @ColumnInfo("address_town")
+    @ColumnInfo(name = "address_town")
     val addressTown: String,
-    @ColumnInfo("address_street")
+    @ColumnInfo(name = "address_street")
     val addressStreet: String,
-    @ColumnInfo("address_house")
+    @ColumnInfo(name = "address_house")
     val addressHouse: String,
+    @ColumnInfo(name = "company")
     val company: String,
-    @ColumnInfo("experience_preview_text")
+    @ColumnInfo(name = "experience_preview_text")
     val experiencePreviewText: String,
-    @ColumnInfo("experience_text")
+    @ColumnInfo(name = "experience_text")
     val experienceText: String,
-    @ColumnInfo("published_date")
+    @ColumnInfo(name = "published_date")
     val publishedDate: String,
+    @ColumnInfo(name = "is_favorite")
     val isFavorite: Boolean,
-    @ColumnInfo("salary_short")
+    @ColumnInfo(name = "salary_short")
     val salaryShort: String,
-    @ColumnInfo("salary_full")
+    @ColumnInfo(name = "salary_full")
     val salaryFull: String,
+    @ColumnInfo(name = "schedules")
     val schedules: String,
-    @ColumnInfo("applied_number")
+    @ColumnInfo(name = "applied_number")
     val appliedNumber: Int,
+    @ColumnInfo(name = "description")
     val description: String,
+    @ColumnInfo(name = "responsibilities")
     val responsibilities: String,
+    @ColumnInfo(name = "questions")
     val questions: String,
 )
 

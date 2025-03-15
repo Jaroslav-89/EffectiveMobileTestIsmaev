@@ -1,5 +1,6 @@
 package com.example.search.presentation.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,9 +25,6 @@ class VacanciesAdapter(private val onVacancyClickListener: VacancyClickListener)
     override fun onBindViewHolder(holder: VacanciesViewHolder, position: Int) {
         val vacancy = getItem(position)
         holder.bind(vacancy, onVacancyClickListener)
-        holder.itemView.setOnClickListener {
-            onVacancyClickListener.onVacancyClick(currentList[position])
-        }
     }
 
     class VacanciesViewHolder(
@@ -39,35 +37,45 @@ class VacanciesAdapter(private val onVacancyClickListener: VacancyClickListener)
             clickListener: VacancyClickListener,
         ) {
             with(binding) {
-                favoriteBtn.setOnClickListener { clickListener.onVacancyClick(vacancy) }
+                favoriteBtn.setOnClickListener {
+                    clickListener.onVacancyClick(vacancy)
+                    Log.d("yyy", vacancy.toString())
+                }
+
                 with(vacancy) {
                     if (lookingNumber != 0) {
                         peoplesNumber.text = lookingNumber.toString()
                         peoplesNumber.visibility = View.VISIBLE
-                    }
+                    } else peoplesNumber.visibility = View.GONE
                     if (title.isNotBlank()) {
                         vacancyName.text = title
                         vacancyName.visibility = View.VISIBLE
-                    }
+                    } else vacancyName.visibility = View.GONE
 
                     if (addressTown.isNotBlank()) {
                         city.text = addressTown
                         city.visibility = View.VISIBLE
-                    }
+                    } else city.visibility = View.GONE
                     if (company.isNotBlank()) {
                         companyName.text = company
                         companyName.visibility = View.VISIBLE
                         trustedCompanyIc.visibility = View.VISIBLE
+                    } else {
+                        companyName.visibility = View.GONE
+                        trustedCompanyIc.visibility = View.GONE
                     }
                     if (experiencePreviewText.isNotBlank()) {
                         workExperience.text = experiencePreviewText
                         workExperience.visibility = View.VISIBLE
                         workExperienceIc.visibility = View.VISIBLE
+                    } else {
+                        workExperience.visibility = View.GONE
+                        workExperienceIc.visibility = View.GONE
                     }
                     if (publishedDate.isNotBlank()) {
                         publicationDate.text = publishedDate
                         publicationDate.visibility = View.VISIBLE
-                    }
+                    } else publicationDate.visibility = View.GONE
                     if (isFavorite)
                         favoriteBtn.setImageResource(com.example.uikit.R.drawable.ic_favorite_active)
                     else

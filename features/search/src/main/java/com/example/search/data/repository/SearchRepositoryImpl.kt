@@ -1,8 +1,10 @@
 package com.example.search.data.repository
 
+import com.example.common.domain.model.Vacancy
 import com.example.common.utills.ErrorType
 import com.example.common.utills.NetworkResult
 import com.example.database.AppDatabaseApi
+import com.example.database.entity.FavoriteVacancyEntity
 import com.example.network.NetworkClient
 import com.example.network.dto.JobsResponse
 import com.example.search.data.converters.JobsDtoConverter
@@ -44,6 +46,14 @@ class SearchRepositoryImpl(
             else -> {
                 emit(NetworkResult.Error(ErrorType.SERVER_THROWABLE))
             }
+        }
+    }
+
+    override suspend fun updateVacancy(vacancy: Vacancy) {
+        if (vacancy.isFavorite) {
+            dataBase.favoritesDao.addFavoriteVacancy(VacancyEntityConverter.convert(vacancy))
+        } else {
+            dataBase.favoritesDao.deleteFavoriteVacancy(VacancyEntityConverter.convert(vacancy))
         }
     }
 }

@@ -34,6 +34,7 @@
                 android:drawableStart="@drawable/ic_search"
                 android:drawablePadding="9dp"
                 android:drawableTint="@color/grey3"
+                android:enabled="false"
                 android:hint="@string/search_text_hint"
                 android:paddingVertical="8dp"
                 android:paddingStart="8dp"

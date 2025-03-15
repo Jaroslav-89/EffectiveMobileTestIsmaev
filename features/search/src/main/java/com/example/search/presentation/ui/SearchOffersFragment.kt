@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DefaultItemAnimator
 import com.example.search.databinding.FragmentSearchOffersBinding
 import com.example.search.domain.model.Jobs
 import com.example.search.presentation.adapter.OffersAdapter
@@ -29,7 +30,7 @@ class SearchOffersFragment : Fragment() {
     }
 
     private val vacanciesAdapter = VacanciesAdapter { vacancy ->
-
+        searchViewModel.onFavoriteClick(vacancy)
     }
 
     override fun onCreateView(
@@ -52,6 +53,8 @@ class SearchOffersFragment : Fragment() {
     private fun initRecyclerView() {
         binding.offersRv.adapter = offersAdapter
         binding.vacanciesRv.adapter = vacanciesAdapter
+        binding.vacanciesRv.itemAnimator = null
+
     }
 
     private fun observeViewModel() {

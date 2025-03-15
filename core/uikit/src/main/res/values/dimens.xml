@@ -10,11 +10,11 @@
 <!--    <dimen name="space_4">4dp</dimen>-->
 <!--    <dimen name="space_8">8dp</dimen>-->
 <!--    <dimen name="space_12">12dp</dimen>-->
-<!--    <dimen name="space_16">16dp</dimen>-->
+    <dimen name="space_16">16dp</dimen>
 <!--    <dimen name="space_17">17dp</dimen>-->
 <!--    <dimen name="space_20">20dp</dimen>-->
-<!--    <dimen name="space_24">24dp</dimen>-->
-<!--    <dimen name="space_32">32dp</dimen>-->
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_32">32dp</dimen>
 <!--    <dimen name="space_46">46dp</dimen>-->
 <!--    <dimen name="space_54">54dp</dimen>-->
 <!--    <dimen name="space_80">80dp</dimen>-->

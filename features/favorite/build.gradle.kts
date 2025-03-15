@@ -48,4 +48,6 @@ dependencies {
 
     implementation(project(":core:uikit"))
     implementation(project(":core:database"))
+    implementation(project(":core:network"))
+
 }

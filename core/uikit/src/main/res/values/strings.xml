@@ -7,8 +7,11 @@
     <string name="messages_bottom_nav">Сообщения</string>
     <string name="profile_bottom_nav">Профиль</string>
 
-
     <string name="respond_to_vacancy_btn">Откликнуться</string>
     <string name="search_text_hint">Должность, ключевые слова</string>
     <string name="vacancy_search_heading">Вакансии для вас</string>
+
+    <string name="retry_btn">Обновить</string>
+    <string name="server_error">Ошибка сервера. повторите попытку позже.</string>
+    <string name="no_internet_error">Проблемы со связью\n\nЗагрузка не удалась. Проверьте\nподключение к интернету.</string>
 </resources>

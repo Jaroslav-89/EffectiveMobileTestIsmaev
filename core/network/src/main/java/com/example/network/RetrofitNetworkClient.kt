@@ -1,6 +1,7 @@
 package com.example.network
 
 import com.example.network.dto.Response
+import com.example.network.utills.NetworkConnectionCheckerApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
@@ -8,10 +9,10 @@ import java.io.IOException
 
 class RetrofitNetworkClient(
     private val jobsApiService: JobsApiService,
-    private val connectionChecker: NetworkConnectionChecker,
+    private val connectionChecker: NetworkConnectionCheckerApi,
 ) : NetworkClient {
     override suspend fun doRequest(): Response {
-        if (!connectionChecker.isConnected()) return Response().apply { resultCode = -1 }
+        if (!connectionChecker.isConnected) return Response().apply { resultCode = -1 }
 
         return withContext(Dispatchers.IO) {
             try {

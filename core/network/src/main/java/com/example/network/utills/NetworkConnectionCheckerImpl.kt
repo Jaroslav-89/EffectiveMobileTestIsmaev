@@ -1,12 +1,11 @@
-package com.example.network_utills
+package com.example.network.utills
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.example.network.NetworkConnectionChecker
 
-class AndroidNetworkConnectionChecker(private val context: Context) : NetworkConnectionChecker {
-    override fun isConnected(): Boolean {
+internal class NetworkConnectionCheckerImpl(private val context: Context) {
+    fun isConnected(): Boolean {
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val capabilities =

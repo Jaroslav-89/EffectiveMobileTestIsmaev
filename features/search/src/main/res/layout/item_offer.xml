@@ -20,17 +20,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
+            android:ellipsize="end"
             android:src="@drawable/ic_jobs_nearby" />
 
         <TextView
-            android:id="@+id/offerDescriptionIv"
+            android:id="@+id/offerDescriptionTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_marginTop="16dp"
+            android:ellipsize="end"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textStyle="bold"
             tools:text="Вакансии рядом с вами" />
 
         <TextView
@@ -38,6 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textColor="@color/green"
             android:textSize="14sp"
             tools:text="Поднять" />

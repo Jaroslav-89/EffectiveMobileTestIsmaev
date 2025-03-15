@@ -19,7 +19,7 @@ android {
         buildConfigField(
             "String",
             "JOBS_API_BASE_URL",
-            "\"https://drive.usercontent.google.com/u/0/uc?id=1z4TbeDkbfXkvgpoJprXbN85uCcD7f00r&export=download\""
+            "\"https://drive.usercontent.google.com\""
         )
     }
 
@@ -59,9 +59,13 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.di.koin)
 
+    //УДАЛИТЬ
+    implementation(libs.retrofit.core)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit.serialization.converter)
+
     implementation(project(":core:uikit"))
     implementation(project(":core:network"))
-    implementation(project(":core:network-utills"))
     implementation(project(":core:database"))
     implementation(project(":features:search"))
     implementation(project(":features:favorite"))

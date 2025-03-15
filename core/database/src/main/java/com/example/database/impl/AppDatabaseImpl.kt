@@ -6,7 +6,7 @@ import com.example.database.entity.FavoriteVacancyEntity
 import com.example.database.impl.dao.FavoritesDao
 
 @Database(
-    version = 1,
+    version = 3,
     entities = [FavoriteVacancyEntity::class],
     exportSchema = false,
 )

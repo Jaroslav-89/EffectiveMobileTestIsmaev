@@ -48,6 +48,12 @@ dependencies {
 
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.di.koin)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
     implementation(project(":core:uikit"))
+    implementation(project(":core:network"))
+    implementation(project(":core:database"))
+    implementation(project(":core:common"))
 }

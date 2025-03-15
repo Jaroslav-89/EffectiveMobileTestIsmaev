@@ -5,17 +5,16 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
 import retrofit2.Retrofit
-import retrofit2.create
 import retrofit2.http.GET
 
 interface JobsApiService {
-    @GET
+    @GET("/u/0/uc?id=1z4TbeDkbfXkvgpoJprXbN85uCcD7f00r&export=download/")
     suspend fun getOffersAndVacancies(): JobsResponse
 }
 
 fun JobsApiService(baseUrl: String): JobsApiService {
     val retrofit = retrofit(baseUrl)
-    return retrofit.create()
+    return retrofit.create(JobsApiService::class.java)
 }
 
 private fun retrofit(baseUrl: String): Retrofit {

@@ -27,8 +27,6 @@ data class FavoriteVacancyEntity(
     val experienceText: String,
     @ColumnInfo(name = "published_date")
     val publishedDate: String,
-    @ColumnInfo(name = "is_favorite")
-    val isFavorite: Boolean,
     @ColumnInfo(name = "salary_short")
     val salaryShort: String,
     @ColumnInfo(name = "salary_full")

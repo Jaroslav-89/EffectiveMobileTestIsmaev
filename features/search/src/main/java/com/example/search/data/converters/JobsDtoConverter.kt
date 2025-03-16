@@ -4,6 +4,7 @@ import com.example.common.domain.model.Vacancy
 import com.example.network.dto.JobsResponse
 import com.example.network.dto.OfferDto
 import com.example.network.dto.VacancyDto
+import com.example.uikit.R
 import com.example.search.domain.model.Jobs
 import com.example.search.domain.model.Offer
 import java.time.LocalDate
@@ -59,7 +60,6 @@ private fun String.toUiPublishedDate(): String {
     return try {
         val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
         val outputFormatter = DateTimeFormatter.ofPattern("d MMMM", Locale.getDefault())
-
         val date = LocalDate.parse(this, inputFormatter)
         date.format(outputFormatter)
     } catch (e: Exception) {

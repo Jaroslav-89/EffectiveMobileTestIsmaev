@@ -1,5 +1,81 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingHorizontal="@dimen/space_16"
+    android:paddingTop="@dimen/space_32">
+
+    <TextView
+        android:id="@+id/vacancyFavoriteHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:text="@string/vacancy_favorite_heading"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vacanciesValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacancyFavoriteHeading"
+        tools:text="145 вакансий"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vacanciesRv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_16"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacanciesValueTv"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_vacancy"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/emptyListTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="center"
+        android:padding="@dimen/space_16"
+        android:text="@string/vacancy_not_found"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vacancyFavoriteHeading"
+        tools:text="У вас нет избранных вакансий"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vacancyFavoriteHeading"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

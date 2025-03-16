@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation_graph"
     app:startDestination="@id/navSearchFragment">
 
@@ -14,17 +13,22 @@
 
     <fragment
         android:id="@+id/navResponsesFragment"
-        android:name="com.example.favorite.presentation.ui.FavoriteVacanciesFragment"
-        android:label="FavoriteVacanciesFragment" />
+        android:name="com.example.responses.ui.ResponseFragment"
+        android:label="ResponseFragment" />
 
     <fragment
         android:id="@+id/navMessagesFragment"
-        android:name="com.example.favorite.presentation.ui.FavoriteVacanciesFragment"
-        android:label="FavoriteVacanciesFragment" />
+        android:name="com.example.messages.ui.MessagesFragment"
+        android:label="MessagesFragment" />
 
     <fragment
         android:id="@+id/navProfileFragment"
-        android:name="com.example.favorite.presentation.ui.FavoriteVacanciesFragment"
-        android:label="FavoriteVacanciesFragment" />
+        android:name="com.example.profile.ui.ProfileFragment"
+        android:label="ProfileFragment" />
+
+    <fragment
+        android:id="@+id/vacancyDetailFragment"
+        android:name="com.example.vacancy_detail.ui.VacancyDetailFragment"
+        android:label="VacancyDetailFragment" />
 
 </navigation>

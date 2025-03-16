@@ -1,6 +1,5 @@
 package com.example.search.presentation.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.common.domain.model.Vacancy
+import com.example.uikit.R
 import com.example.uikit.databinding.ItemVacancyBinding
 
 class VacanciesAdapter(private val onVacancyClickListener: VacancyClickListener) :
@@ -25,6 +25,7 @@ class VacanciesAdapter(private val onVacancyClickListener: VacancyClickListener)
     override fun onBindViewHolder(holder: VacanciesViewHolder, position: Int) {
         val vacancy = getItem(position)
         holder.bind(vacancy, onVacancyClickListener)
+        holder.itemView.setOnClickListener { onVacancyClickListener.onVacancyClick(currentList[position]) }
     }
 
     class VacanciesViewHolder(
@@ -38,13 +39,17 @@ class VacanciesAdapter(private val onVacancyClickListener: VacancyClickListener)
         ) {
             with(binding) {
                 favoriteBtn.setOnClickListener {
-                    clickListener.onVacancyClick(vacancy)
-                    Log.d("yyy", vacancy.toString())
+                    clickListener.onFavoriteClick(vacancy)
                 }
 
                 with(vacancy) {
                     if (lookingNumber != 0) {
-                        peoplesNumber.text = lookingNumber.toString()
+                        val numOfPeoples = itemView.resources.getQuantityString(
+                            R.plurals.peoples_number,
+                            lookingNumber,
+                            lookingNumber
+                        )
+                        peoplesNumber.text = numOfPeoples
                         peoplesNumber.visibility = View.VISIBLE
                     } else peoplesNumber.visibility = View.GONE
                     if (title.isNotBlank()) {
@@ -73,26 +78,32 @@ class VacanciesAdapter(private val onVacancyClickListener: VacancyClickListener)
                         workExperienceIc.visibility = View.GONE
                     }
                     if (publishedDate.isNotBlank()) {
-                        publicationDate.text = publishedDate
+                        val context = itemView.context
+                        val publishedText = context.getString(
+                            R.string.vacancy_item_published_tv,
+                            vacancy.publishedDate
+                        )
+                        publicationDate.text = publishedText
                         publicationDate.visibility = View.VISIBLE
                     } else publicationDate.visibility = View.GONE
                     if (isFavorite)
-                        favoriteBtn.setImageResource(com.example.uikit.R.drawable.ic_favorite_active)
+                        favoriteBtn.setImageResource(R.drawable.ic_favorite_active)
                     else
-                        favoriteBtn.setImageResource(com.example.uikit.R.drawable.ic_favorite_in_active)
+                        favoriteBtn.setImageResource(R.drawable.ic_favorite_in_active)
                     salary.text = formatSalary(salaryShort)
                 }
             }
         }
     }
+
+    interface VacancyClickListener {
+        fun onVacancyClick(vacancy: Vacancy)
+        fun onFavoriteClick(vacancy: Vacancy)
+    }
 }
 
 private fun formatSalary(salary: String): String {
     return salary.replace(" до ", " - ")
-}
-
-fun interface VacancyClickListener {
-    fun onVacancyClick(vacancy: Vacancy)
 }
 
 private class VacanciesDiffCallback : DiffUtil.ItemCallback<Vacancy>() {

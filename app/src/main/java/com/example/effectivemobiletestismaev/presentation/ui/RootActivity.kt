@@ -1,6 +1,7 @@
 package com.example.effectivemobiletestismaev.presentation.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -33,6 +34,18 @@ class RootActivity : AppCompatActivity() {
                 com.example.search.R.id.searchOffersFragment, com.example.search.R.id.searchAllVacanciesFragment -> {
                     binding.bottomNavigationView.menu.findItem(R.id.navSearchFragment).isChecked =
                         true
+                    binding.bottomNavigationView.visibility = View.VISIBLE
+                    binding.divider.visibility = View.VISIBLE
+                }
+
+                R.id.vacancyDetailFragment -> {
+                    binding.bottomNavigationView.visibility = View.GONE
+                    binding.divider.visibility = View.GONE
+                }
+
+                else -> {
+                    binding.bottomNavigationView.visibility = View.VISIBLE
+                    binding.divider.visibility = View.VISIBLE
                 }
             }
         }

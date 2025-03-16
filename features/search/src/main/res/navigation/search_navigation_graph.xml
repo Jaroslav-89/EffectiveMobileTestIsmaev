@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/searchOffersFragment"
         android:name="com.example.search.presentation.ui.SearchOffersFragment"
-        android:label="SearchOffersFragment" />
+        android:label="SearchOffersFragment" >
+        <action
+            android:id="@+id/action_searchOffersFragment_to_searchAllVacanciesFragment"
+            app:destination="@id/searchAllVacanciesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/searchAllVacanciesFragment"

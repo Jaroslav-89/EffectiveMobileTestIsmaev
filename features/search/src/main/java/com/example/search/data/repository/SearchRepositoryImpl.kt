@@ -4,7 +4,6 @@ import com.example.common.domain.model.Vacancy
 import com.example.common.utills.ErrorType
 import com.example.common.utills.NetworkResult
 import com.example.database.AppDatabaseApi
-import com.example.database.entity.FavoriteVacancyEntity
 import com.example.network.NetworkClient
 import com.example.network.dto.JobsResponse
 import com.example.search.data.converters.JobsDtoConverter
@@ -33,6 +32,7 @@ class SearchRepositoryImpl(
 
                 if (data.vacancies.isNotEmpty()) {
                     val favoriteVacancies = data.vacancies.filter { it.isFavorite }
+                    dataBase.favoritesDao.deleteAll()
                     favoriteVacancies.forEach() {
                         dataBase.favoritesDao.addFavoriteVacancy(VacancyEntityConverter.convert(it))
                     }
@@ -55,5 +55,9 @@ class SearchRepositoryImpl(
         } else {
             dataBase.favoritesDao.deleteFavoriteVacancy(VacancyEntityConverter.convert(vacancy))
         }
+    }
+
+    override fun getFavoriteVacanciesId(): Flow<List<String>> {
+        return dataBase.favoritesDao.getAllVacancyIds()
     }
 }

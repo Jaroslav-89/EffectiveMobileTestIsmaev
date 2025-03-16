@@ -5,6 +5,7 @@ import com.example.effectivemobiletestismaev.di.appModule
 import com.example.effectivemobiletestismaev.di.databaseModule
 import com.example.effectivemobiletestismaev.di.featureFavoriteModule
 import com.example.effectivemobiletestismaev.di.featureSearchModule
+import com.example.effectivemobiletestismaev.di.navigationModule
 import com.example.effectivemobiletestismaev.di.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -21,6 +22,7 @@ class App : Application() {
                 networkModule,
                 featureSearchModule,
                 featureFavoriteModule,
+                navigationModule(),
             )
         }
     }

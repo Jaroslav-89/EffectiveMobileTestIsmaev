@@ -59,14 +59,13 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.di.koin)
 
-    //УДАЛИТЬ
-    implementation(libs.retrofit.core)
-    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.retrofit.serialization.converter)
-
     implementation(project(":core:uikit"))
     implementation(project(":core:network"))
     implementation(project(":core:database"))
-    implementation(project(":features:search"))
     implementation(project(":features:favorite"))
+    implementation(project(":features:messages"))
+    implementation(project(":features:profile"))
+    implementation(project(":features:responses"))
+    implementation(project(":features:search"))
+    implementation(project(":features:vacancy_detail"))
 }

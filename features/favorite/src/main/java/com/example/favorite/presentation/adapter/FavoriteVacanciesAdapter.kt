@@ -26,7 +26,9 @@ class FavoriteVacanciesAdapter(private val onVacancyClickListener: VacancyClickL
     override fun onBindViewHolder(holder: FavoriteVacanciesViewHolder, position: Int) {
         val vacancy = getItem(position)
         holder.bind(vacancy, onVacancyClickListener)
-        holder.itemView.setOnClickListener { onVacancyClickListener.onVacancyClick(currentList[position]) }
+        holder.itemView.setOnClickListener {
+            onVacancyClickListener.onVacancyClick(currentList[position])
+        }
     }
 
     class FavoriteVacanciesViewHolder(

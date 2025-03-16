@@ -8,11 +8,11 @@ import com.example.favorite.navigation.SearchNavigator
 import org.koin.dsl.module
 
 fun navigationModule() = module {
-    single<SearchNavigator> { (navController: NavController) ->
+    factory<SearchNavigator> { (navController: NavController) ->
         AppSearchNavigator(navController)
     }
 
-    single<FavoriteNavigator> { (navController: NavController) ->
+    factory<FavoriteNavigator> { (navController: NavController) ->
         AppFavoriteNavigator(navController)
     }
 }

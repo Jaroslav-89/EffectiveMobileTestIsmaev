@@ -18,6 +18,7 @@
         android:drawableStart="@drawable/ic_search"
         android:drawablePadding="@dimen/space_8"
         android:drawableTint="@color/grey3"
+        android:enabled="false"
         android:fontFamily="@font/sf_pro_display_regular"
         android:hint="@string/search_text_hint"
         android:paddingVertical="@dimen/space_8"

@@ -29,7 +29,7 @@
 
 ## Скриншоты экранов
 #### Стартовый экран (Поиск вакансий + блок предложений + 3 первые вакансии)
-![photo_2025-03-17_03-18-47](https://github.com/user-attachments/assets/f9aba8ea-c948-40f5-9cce-3e97a5da9b1e)
+<img src="https://github.com/user-attachments/assets/f9aba8ea-c948-40f5-9cce-3e97a5da9b1e"  width="270" height="600" >
 
 #### Поиск вакансий + все найденные вакансии
 ![photo_2025-03-17_03-18-50](https://github.com/user-attachments/assets/1a5da53c-b65b-4396-8d0b-c209a83c3fc5)

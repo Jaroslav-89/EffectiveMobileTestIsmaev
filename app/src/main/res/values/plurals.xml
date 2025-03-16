@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <plurals name="peoples_number">
-        <item quantity="one">%d человек</item>
-        <item quantity="few">%d человека</item>
-        <item quantity="many">%d человек</item>
-        <item quantity="other">%d человек</item>
-    </plurals>
-</resources>

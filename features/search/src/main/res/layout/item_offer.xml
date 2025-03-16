@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/offer"
+    android:layout_width="@dimen/size_132"
+    android:layout_height="@dimen/size_120"
+    android:layout_marginStart="@dimen/space_8"
+    android:backgroundTint="@color/grey1"
+    android:elevation="@dimen/size_8"
+    app:cardCornerRadius="@dimen/size_8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/offerIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_10"
+            android:ellipsize="end"
+            android:src="@drawable/ic_jobs_nearby" />
+
+        <TextView
+            android:id="@+id/offerDescriptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_16"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14"
+            tools:text="Вакансии рядом с вами" />
+
+        <TextView
+            android:id="@+id/offerActionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:maxLines="1"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_14"
+            tools:text="Поднять" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

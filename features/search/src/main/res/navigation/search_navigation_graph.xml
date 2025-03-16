@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navSearchFragment"
+    app:startDestination="@id/searchOffersFragment">
+
+    <fragment
+        android:id="@+id/searchOffersFragment"
+        android:name="com.example.search.presentation.ui.SearchOffersFragment"
+        android:label="SearchOffersFragment" >
+        <action
+            android:id="@+id/action_searchOffersFragment_to_searchAllVacanciesFragment"
+            app:destination="@id/searchAllVacanciesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchAllVacanciesFragment"
+        android:name="com.example.search.presentation.ui.SearchAllVacanciesFragment"
+        android:label="SearchAllVacanciesFragment" />
+</navigation>

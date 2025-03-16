@@ -4,13 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.common.domain.model.Vacancy
 import com.example.uikit.R
 import com.example.uikit.databinding.ItemVacancyBinding
 
 class FavoriteVacanciesAdapter(private val onVacancyClickListener: VacancyClickListener) :
-    androidx.recyclerview.widget.ListAdapter<Vacancy, FavoriteVacanciesAdapter.FavoriteVacanciesViewHolder>(
+    ListAdapter<Vacancy, FavoriteVacanciesAdapter.FavoriteVacanciesViewHolder>(
         VacanciesDiffCallback()
     ) {
 

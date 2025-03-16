@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vacancyHeaderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/space_16">
+
+    <TextView
+        android:id="@+id/vacanciesValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        tools:text="145 вакансий" />
+
+    <TextView
+        android:id="@+id/sortingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_6"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="@string/vacancy_search_filter_heading"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        tools:text="По соответствию" />
+
+    <ImageView
+        android:id="@+id/sortingIc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sorting"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -10,10 +10,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.common.domain.model.Vacancy
 import com.example.favorite.databinding.FragmentFavoriteVacanciesBinding
 import com.example.favorite.navigation.FavoriteNavigator
-import com.example.favorite.presentation.adapter.FavoriteVacanciesAdapter
+import com.example.favorite.presentation.adapter.NewFavoriteVacanciesAdapter
 import com.example.favorite.presentation.state.FavoriteScreenState
 import com.example.favorite.presentation.viewmodel.FavoriteVacanciesViewModel
-import com.example.uikit.R
 import org.koin.android.ext.android.get
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -26,8 +25,8 @@ class FavoriteVacanciesFragment : Fragment() {
     private val favoriteVacanciesViewModel: FavoriteVacanciesViewModel by viewModel()
     private lateinit var favoriteNavigator: FavoriteNavigator
 
-    private val vacanciesAdapter = FavoriteVacanciesAdapter(
-        object : FavoriteVacanciesAdapter.VacancyClickListener {
+    private val vacanciesAdapter = NewFavoriteVacanciesAdapter(
+        object : NewFavoriteVacanciesAdapter.VacancyClickListener {
             override fun onVacancyClick(vacancy: Vacancy) {
                 favoriteNavigator.openVacancyDetails()
             }
@@ -93,19 +92,12 @@ class FavoriteVacanciesFragment : Fragment() {
     ) {
         binding.emptyListTv.isGone = emptyLayoutGone
         binding.progressBar.isGone = progressBarGone
-        binding.vacanciesValueTv.isGone = contentLayoutGone
         binding.vacanciesRv.isGone = contentLayoutGone
     }
 
     private fun showContent(vacancies: List<Vacancy>) {
         hideViews(progressBarGone = true, emptyLayoutGone = true)
         vacanciesAdapter.submitList(vacancies)
-        val vacancyValueText = resources.getQuantityString(
-            R.plurals.vacancies_number_heading,
-            vacancies.size,
-            vacancies.size
-        )
-        binding.vacanciesValueTv.text = vacancyValueText
     }
 
     private fun initRecyclerView() {

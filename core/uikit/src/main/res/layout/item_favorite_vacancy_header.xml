@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vacancyHeaderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/vacancyFavoriteHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:text="@string/vacancy_favorite_heading"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_20"
+        android:layout_marginTop="@dimen/space_32"/>
+
+    <TextView
+        android:id="@+id/vacanciesValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/grey3"
+        android:textSize="@dimen/font_14"
+        tools:text="145 вакансий" />
+
+</LinearLayout>

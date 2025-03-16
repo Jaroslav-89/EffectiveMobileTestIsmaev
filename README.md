@@ -32,7 +32,7 @@
 <img src="https://github.com/user-attachments/assets/f9aba8ea-c948-40f5-9cce-3e97a5da9b1e"  width="270" height="600" >
 
 #### Поиск вакансий + все найденные вакансии
-![photo_2025-03-17_03-18-50](https://github.com/user-attachments/assets/1a5da53c-b65b-4396-8d0b-c209a83c3fc5)
+<img src="https://github.com/user-attachments/assets/1a5da53c-b65b-4396-8d0b-c209a83c3fc5"  width="270" height="600" >
 
 #### Избранные вакансии
-![photo_2025-03-17_03-18-51](https://github.com/user-attachments/assets/d67169e1-f24b-43b3-9822-af3867842250)
+<img src="https://github.com/user-attachments/assets/d67169e1-f24b-43b3-9822-af3867842250"  width="270" height="600" >

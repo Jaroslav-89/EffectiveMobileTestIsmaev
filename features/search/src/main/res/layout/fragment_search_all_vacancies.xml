@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shadows"
+    android:paddingHorizontal="@dimen/space_16"
+    android:paddingTop="@dimen/space_16"
+    tools:context=".presentation.ui.SearchAllVacanciesFragment">
+
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_8"
+        android:background="@drawable/background_search_field_rounded"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/space_8"
+        android:drawableTint="@color/grey3"
+        android:enabled="false"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:hint="@string/search_text_hint"
+        android:paddingVertical="@dimen/space_8"
+        android:paddingStart="@dimen/space_8"
+        android:textColorHint="@color/grey3"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toStartOf="@+id/filtersBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/filtersBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_search_field_rounded"
+        android:padding="@dimen/space_8"
+        android:src="@drawable/ic_filters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vacanciesValueTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEt"
+        tools:text="145 вакансий" />
+
+    <TextView
+        android:id="@+id/sortingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_6"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="@string/vacancy_search_filter_heading"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/sortingIc"
+        app:layout_constraintTop_toBottomOf="@+id/searchEt"
+        tools:text="По соответствию" />
+
+    <ImageView
+        android:id="@+id/sortingIc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sorting"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/sortingTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sortingTv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vacanciesRv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        android:layout_marginTop="@dimen/space_8"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacanciesValueTv"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_vacancy" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEt"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center"
+            android:padding="@dimen/space_16"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16"
+            tools:text="Error message" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            style="@style/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_blue_rounded"
+            android:backgroundTint="@color/blue"
+            android:paddingHorizontal="@dimen/space_16"
+            android:text="@string/retry_btn" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

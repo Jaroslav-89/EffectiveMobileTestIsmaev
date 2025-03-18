@@ -5,6 +5,7 @@
 - Multimodule + Clean Architecture
 - Koin
 - Single Activity + Fragment + LiveData (MVVM)
+- Shared ViewModel
 - Kotlin Coroutines + Flow
 - Room
 - Retrofit
